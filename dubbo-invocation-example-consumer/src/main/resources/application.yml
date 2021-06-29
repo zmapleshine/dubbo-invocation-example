@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+
+spring:
+  application:
+    name: dubbo-invocation-example-consumer
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        prefer-ip-address: true
+        healthCheckInterval: 10s
+        deregister: true
+dubbo:
+  registry:
+    address: spring-cloud://localhost
+  consumer:
+    check: false
+    timeout: 600000
+  protocol:
+    name: dubbo
+    port: -1
+  cloud:
+    subscribed-services: 'dubbo-invocation-example-service1'
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
