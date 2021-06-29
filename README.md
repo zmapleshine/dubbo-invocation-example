@@ -57,3 +57,6 @@ mvn clean compile
 -Dotel.javaagent.configuration-file=./javaagent-config.properties
 -Dotel.resource.attributes=service.name=dubbo-invocation-example-consumer
 ```
+
+Jaeger portal :
+http://localhost:16686
