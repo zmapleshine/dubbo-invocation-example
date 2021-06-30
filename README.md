@@ -60,3 +60,6 @@ mvn clean compile
 
 Jaeger portal :
 http://localhost:16686
+
+Test API:
+http://localhost:8080/consumer
